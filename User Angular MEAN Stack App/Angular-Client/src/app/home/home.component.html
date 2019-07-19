@@ -1,0 +1,91 @@
+<br /><br />
+<div class="col-md-10">
+  <!-- uppercase, lowercase, titlecase, date, 
+    currency: "INR","USD", "EUR" etc -->
+  <h3 class="text-primary"> {{ title | titlecase }}</h3>
+  <!-- {{25000 | currency :"INR":true}} -->
+  <br />
+  <h5 class="text-warning"> In this demo, 
+    we will learn about </h5>
+  <ul class="text-success" style="font-weight: bold">
+    <li>
+      Angular {{ 36 | sqrt}} Architecture
+      <!-- Angular 6 Architecture -->
+      <ul>
+        <li>Modules</li>
+        <li>Root Component Or App Component</li>
+        <li>Services & Depedency Injection</li>
+        <li>Directives</li>
+        <li>Pipes</li>
+        <li>Models</li>
+        <li>Routing, etc</li>
+      </ul>
+    </li>
+  </ul>
+  <a class="text-right" [routerLink]="['/login']">
+    <h3>Login..</h3>
+  </a> &nbsp;&nbsp;&nbsp;
+
+  <!-- Builtin Pipes - number, percent, json, slice -->
+  <!-- <h5>My Salary is {{25000 | number:'5.2'}}</h5> <br />
+  <h5>Some Percentage is {{00.54656 | percent}}</h5> <br />
+  
+  <h5>JSON Data</h5>
+  <b>{{ cust | json }}</b> <br /> -->
+  <!-- slice: start:end -->
+  <!-- <b>Months: {{ months | slice:2:6}}</b> <br /> -->
+  
+
+
+
+
+  <!-- <h3>A to Z Solutions,</h3>
+  <p class="text-success" style="font-weight: bold">
+    As the name implies provides complete turnkey IT solutions to its customers. With successful presence in the
+    Kingdom we have gained respect and recognition from all our clients, and our reputation in the market remains
+    unprecedented. We have developed a distinctive capability to integrate IT Solutions from all three domains,
+    hardware, software and networking to bring forth high-end cost effective and reliable solutions for our customers.
+    We offer a wide range of business critical solutions which include, but are not limited to, infrastructure
+    software, data storage security solutions. We also provide solutions which will enhance the business performance of
+    our customers like Enterprise Resource Planning application, software development and network optimization.
+  </p>
+</div> -->
+
+  <!-- <a class="text-right" [routerLink]="['/calc']">
+    <h3>Calculator..</h3></a>
+    &nbsp;&nbsp;&nbsp;
+    <a class="text-right" [routerLink]="['/twoway']">
+      <h3>Two-way DataBinding..</h3></a>
+      &nbsp;&nbsp;&nbsp;
+      <a class="text-right" [routerLink]="['/lifecycle']">
+        <h3>Life Cycle..</h3></a> -->
+  <!-- <a class="text-right" href="/login">
+    <h3>Login..</h3></a> -->
+
+  <!-- <hr />
+<h3 changeText></h3>
+<hr /> -->
+  <!-- <div *ngIf="submitted; else status">
+  <h4>Submitted</h4>
+</div> -->
+
+
+
+  <!-- <ng-template #status>
+  <h5 class="text-right">
+    {{ todaysDate | date:'d/M/y'}}</h5>
+  <h5 class="text-right">
+    {{ todaysDate | date:'shortTime'}}</h5>
+  <h5>JSON Data</h5>
+  <b>{{ cust | json }}</b> <br />
+  <b>Months: {{ months | slice:2:6}}</b> <br />
+  <h5>My Salary is {{25000 | number:'5.2'}}</h5> <br />
+  <h5>Some Percentage is {{00.54656 | percent}}</h5> <br />
+  <h5>Some Currency is {{25000 | currency :"INR":true}}</h5> <br />
+
+  <h3>Square Root Of 9 is {{ 9 | sqrt }} </h3>
+  <h3>Square Root Of 81 is {{ 81 | sqrt }} </h3>
+  <h3>Square Root Of 225 is {{ 225 | sqrt }}</h3>
+</ng-template> -->
+
+<!-- currency: 'EUR', currency: 'USD'-->

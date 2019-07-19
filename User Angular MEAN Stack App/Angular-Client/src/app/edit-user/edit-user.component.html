@@ -1,0 +1,85 @@
+<br /><br />
+<div class="col-md-6">
+  <h3>Edit User &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="btn btn-danger" (click)="logOutUser()">LogOff</button>
+  </h3>
+  <br />
+
+  <!-- Designing Add User Form-->
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+X
+    <div class="form-group">
+      <label for="firstName">First Name: </label>
+      <input type="text" class="form-control" formControlName="firstName" id="firstName" />
+
+      <div *ngIf="submitted && editForm.controls.firstName.errors" class="error">
+        <div class="text-danger" *ngIf="editForm.controls.firstName.errors.required">
+          FirstName is required ..
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name: </label>
+      <input type="text" class="form-control" formControlName="lastName" id="lastName" />
+
+      <div *ngIf="submitted && editForm.controls.lastName.errors" class="error">
+        <div class="text-danger" *ngIf="editForm.controls.lastName.errors.required">
+          LastName is required ..
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="age">Age: </label>
+      <input type="number" class="form-control" formControlName="age" id="age" />
+
+      <div *ngIf="submitted && editForm.controls.age.errors" class="error">
+        <div class="text-danger" *ngIf="editForm.controls.age.errors.required">
+          Age is required ..
+        </div>
+        <div class="text-danger" *ngIf="editForm.controls.age.errors.min 
+    || editForm.controls.age.errors.max">
+          Age must be between 20 and 30..
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="mobileNumber">Mobile Number: </label>
+      <input type="text" class="form-control" formControlName="mobileNumber" id="mobileNumber" />
+
+      <div *ngIf="submitted && editForm.controls.mobileNumber.errors" class="error">
+        <div class="text-danger" *ngIf="editForm.controls.mobileNumber.errors.required">
+          Mobile Number is required ..
+        </div>
+        <div class="text-danger" *ngIf="editForm.controls.mobileNumber.errors.pattern">
+          Mobile Number must of 10 digits and should be numeric ..
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email Address: </label>
+      <input type="email" class="form-control" formControlName="email" id="email" />
+
+      <div *ngIf="submitted && editForm.controls.email.errors" class="error">
+        <div class="text-danger" *ngIf="editForm.controls.email.errors.required">
+          Email is required ..
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="password">Password: </label>
+      <input type="password" class="form-control" formControlName="password" id="pwd" />
+      <div *ngIf="submitted && editForm.controls.password.errors" class="error">
+        <div class="text-danger" *ngIf="editForm.controls.password.errors.required">
+          Password is required ..
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-success">Update</button>
+    &nbsp;&nbsp;
+
+    <a class="btn btn-danger" [routerLink]="['/list-user']">Cancel</a>
+    <br /><br />
+  </form>
+</div>

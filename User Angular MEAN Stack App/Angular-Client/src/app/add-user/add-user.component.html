@@ -1,0 +1,120 @@
+<br/><br/>
+<div class="col-md-8 col-lg-8">
+  <h3>Add User</h3>
+  <br/>
+
+  <!-- Designing Add User Form-->
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="firstName">First Name: </label>      
+      <input type="text" class="form-control"
+      formControlName="firstName" id="firstName"/>
+      <div 
+*ngIf="submitted && addForm.controls.firstName.errors"
+      class="error">
+        <div class="text-danger" 
+  *ngIf="addForm.controls.firstName.errors.required">
+          FirstName is required ..
+        </div>
+        <div class="text-danger" 
+  *ngIf="addForm.controls.firstName.errors.pattern">
+          FirstName must begin with Capital letters
+          and 15 characters long ..
+        </div>
+      </div>      
+  </div>
+
+
+
+  <div class="form-group">
+    <label for="lastName">Last Name: </label>      
+    <input type="text" class="form-control"
+    formControlName="lastName" id="lastName"/>
+    <div 
+*ngIf="submitted && addForm.controls.lastName.errors"
+    class="error">
+      <div class="text-danger" 
+  *ngIf="addForm.controls.lastName.errors.required">
+        LastName is required ..
+      </div>
+    </div>      
+</div>
+
+<div class="form-group">
+  <label for="age">Age: </label>      
+  <input type="number" class="form-control"
+  formControlName="age" id="age"/>
+  <div 
+*ngIf="submitted && addForm.controls.age.errors"
+  class="error">
+    <div class="text-danger" 
+*ngIf="addForm.controls.age.errors.required">
+      Age is required ..
+    </div>
+    <div class="text-danger" 
+*ngIf="addForm.controls.age.errors.min 
+  || addForm.controls.age.errors.max">
+      Age must be between 20 and 30..
+    </div>
+  </div>      
+</div>
+<div class="form-group">
+  <label for="mobileNumber">Mobile Number: </label>      
+  <input type="text" class="form-control"
+  formControlName="mobileNumber" id="mobileNumber"/>
+  <div 
+*ngIf="submitted && addForm.controls.mobileNumber.errors"
+  class="error">
+    <div class="text-danger" 
+*ngIf="addForm.controls.mobileNumber.errors.required">
+      Mobile Number is required ..
+    </div>
+    <div class="text-danger" 
+*ngIf="addForm.controls.mobileNumber.errors.pattern">
+Mobile Number must of 10 digits and should be numeric ..
+        </div>
+  </div>      
+</div>
+
+    <div class="form-group">
+        <label for="email">Email Address: </label>      
+        <input type="email" class="form-control"
+        formControlName="email" id="email"/>
+        <div 
+  *ngIf="submitted && addForm.controls.email.errors"
+        class="error">
+          <div class="text-danger" 
+  *ngIf="addForm.controls.email.errors.required">
+            Email is required ..
+          </div>
+          <div class="text-danger" 
+   *ngIf="addForm.controls.email.errors.email">
+            Invalid Email ..
+          </div>
+        </div>      
+    </div>
+    <div class="form-group">
+      <label for="password">Password: </label>
+      <input type="password" class="form-control"
+       formControlName="password" id="password" />
+      <div 
+*ngIf="submitted && addForm.controls.password.errors" 
+class="error">
+      <div class="text-danger" 
+  *ngIf="addForm.controls.password.errors.required">
+          Password is required ..
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-success">Save</button> 
+    &nbsp;&nbsp;
+    <button class="btn btn-danger" 
+        type="reset">Cancel</button>
+        &nbsp;&nbsp;
+        <a class="btn btn-warning" 
+        [routerLink]="['/list-user']">Back to List</a>
+    <br/><br/>
+  </form>
+</div>

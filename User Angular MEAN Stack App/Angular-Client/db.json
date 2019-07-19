@@ -1,0 +1,93 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Amit",
+      "lastName": "Singh",
+      "age": 25,
+      "mobileNumber": "8965895689",
+      "email": "amit@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "firstName": "Anand",
+      "lastName": "Prabhu",
+      "age": 26,
+      "mobileNumber": "9995895689",
+      "email": "anand@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": 3,
+      "firstName": "Pawan",
+      "lastName": "Verma",
+      "age": 22,
+      "mobileNumber": "8956788956",
+      "email": "pawan@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": 4,
+      "firstName": "Aditi",
+      "lastName": "Patil",
+      "age": 20,
+      "mobileNumber": "8956788978",
+      "email": "aditi@gmail.com",
+      "password": "132465"
+    },
+    {
+      "id": 5,
+      "firstName": "Ganesh",
+      "lastName": "Pawar",
+      "age": 28,
+      "mobileNumber": "6589788978",
+      "email": "ganesh@gmail.com",
+      "password": "132456"
+    },
+    {
+      "id": 6,
+      "firstName": "Rahul",
+      "lastName": "Prabhu",
+      "age": 25,
+      "mobileNumber": "7898788978",
+      "email": "rahul@gmail.com",
+      "password": "123546"
+    },
+    {
+      "id": 7,
+      "firstName": "Radhika",
+      "lastName": "Mohan",
+      "age": 30,
+      "mobileNumber": "8978897889",
+      "email": "radhika@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": 8,
+      "firstName": "Kavita",
+      "lastName": "Aman",
+      "age": 22,
+      "mobileNumber": "7889788978",
+      "email": "kavita@gmail.com",
+      "password": "123456789"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- <div style="text-align:center">
+  <h1>
+    Welcome to {{ title | uppercase }}!
+  </h1>
+ </div> -->
+
+<!-- Type Your Name Here: <input type="text" #txtName (keyup)="0" 
+  placeholder="Type here"/>
+
+  Your Name is {{ txtName.value }} -->
+
+<!-- <app-home></app-home> -->
+
+<div class="container">
+  <div class="row">
+  <div style=
+  "color:white; background-color: purple;
+ padding:10px" class="col-lg-12 col-md-12">
+    <h2 class="text-center" style="margin:20px">
+      AtoZ Solutions - {{ title }}
+      <!-- <span ngNonBindable>
+          AtoZ Solutions - {{ title }}
+      </span> -->
+    </h2>
+  </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-8 col-lg-7 col-sm-12">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="col-md-4 col-lg-5 col-sm-12">
+      <br />
+      <img src='../assets/images/logo.png' style="width: 100%" />
+    </div>
+  </div>
+  <br /><br />
+
+  <footer>
+    <div class="row">
+      <div class="col-md-8 col-lg-8">
+        <span class="text-danger">
+          <strong>This site is copyright &copy; 
+            to Capgemini {{todaysDate | date:'yyyy'}}.
+            All rights are reserved here.
+          </strong></span>
+      </div>
+
+      <div class="col-md-4 col-lg-4">
+        <span class="text-primary text-right">
+    <!-- <strong> {{ todaysDate | date:'dd/MM/yy'}} | 
+  {{ todaysDate | date:'shortTime'}} </strong> -->
+          <strong> {{ todaysDate  | date:'dd-MM-yyyy'}}
+  <!-- | Time: {{ todaysDate | date: 'shortTime'}} -->
+  
+          </strong>
+        </span>
+      </div>
+    </div>
+  </footer>
+</div>
